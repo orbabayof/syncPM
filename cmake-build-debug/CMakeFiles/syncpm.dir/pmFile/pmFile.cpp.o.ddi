@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/syncpm.dir/pmFile/pmFile.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

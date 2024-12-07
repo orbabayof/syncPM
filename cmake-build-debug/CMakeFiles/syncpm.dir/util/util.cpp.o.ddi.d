@@ -1,6 +1,6 @@
 CMakeFiles/syncpm.dir/util/util.cpp.o.ddi: \
- /home/light/cpp/syncpm/util/util.cpp /usr/include/stdc-predef.h \
- /home/light/cpp/syncpm/util/../constants.h \
+ /home/light/syncPM/util/util.cpp /usr/include/stdc-predef.h \
+ /home/light/syncPM/util/../constants.h \
  /usr/include/c++/14.2.1/string_view \
  /usr/include/c++/14.2.1/bits/version.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -57,7 +57,7 @@ CMakeFiles/syncpm.dir/util/util.cpp.o.ddi: \
  /usr/include/c++/14.2.1/bits/ostream_insert.h \
  /usr/include/c++/14.2.1/bits/cxxabi_forced.h \
  /usr/include/c++/14.2.1/bits/string_view.tcc \
- /home/light/cpp/syncpm/util/../color.h /usr/include/c++/14.2.1/sstream \
+ /home/light/syncPM/util/../color.h /usr/include/c++/14.2.1/sstream \
  /usr/include/c++/14.2.1/istream /usr/include/c++/14.2.1/ios \
  /usr/include/c++/14.2.1/exception \
  /usr/include/c++/14.2.1/bits/exception_ptr.h \

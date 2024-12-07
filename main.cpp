@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
     packageManager pm {};
 
     pm.installPackage("rust");
+    //pm.uninstallPackage("rust");
+
 
 
 

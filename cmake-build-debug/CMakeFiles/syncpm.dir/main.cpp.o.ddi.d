@@ -1,5 +1,5 @@
-CMakeFiles/syncpm.dir/main.cpp.o.ddi: /home/light/cpp/syncpm/main.cpp \
- /usr/include/stdc-predef.h /home/light/cpp/syncpm/constants.h \
+CMakeFiles/syncpm.dir/main.cpp.o.ddi: /home/light/syncPM/main.cpp \
+ /usr/include/stdc-predef.h /home/light/syncPM/constants.h \
  /usr/include/c++/14.2.1/string_view \
  /usr/include/c++/14.2.1/bits/version.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -55,10 +55,9 @@ CMakeFiles/syncpm.dir/main.cpp.o.ddi: /home/light/cpp/syncpm/main.cpp \
  /usr/include/c++/14.2.1/bits/memoryfwd.h \
  /usr/include/c++/14.2.1/bits/ostream_insert.h \
  /usr/include/c++/14.2.1/bits/cxxabi_forced.h \
- /usr/include/c++/14.2.1/bits/string_view.tcc \
- /home/light/cpp/syncpm/color.h /usr/include/c++/14.2.1/sstream \
- /usr/include/c++/14.2.1/istream /usr/include/c++/14.2.1/ios \
- /usr/include/c++/14.2.1/exception \
+ /usr/include/c++/14.2.1/bits/string_view.tcc /home/light/syncPM/color.h \
+ /usr/include/c++/14.2.1/sstream /usr/include/c++/14.2.1/istream \
+ /usr/include/c++/14.2.1/ios /usr/include/c++/14.2.1/exception \
  /usr/include/c++/14.2.1/bits/exception_ptr.h \
  /usr/include/c++/14.2.1/bits/cxxabi_init_exception.h \
  /usr/include/c++/14.2.1/typeinfo \
@@ -144,9 +143,9 @@ CMakeFiles/syncpm.dir/main.cpp.o.ddi: /home/light/cpp/syncpm/main.cpp \
  /usr/include/c++/14.2.1/bits/basic_ios.tcc \
  /usr/include/c++/14.2.1/ostream /usr/include/c++/14.2.1/bits/ostream.tcc \
  /usr/include/c++/14.2.1/bits/istream.tcc \
- /usr/include/c++/14.2.1/bits/sstream.tcc \
- /home/light/cpp/syncpm/util/util.h /usr/include/c++/14.2.1/iostream \
- /home/light/cpp/syncpm/packageManager/packageManager.h \
+ /usr/include/c++/14.2.1/bits/sstream.tcc /home/light/syncPM/util/util.h \
+ /usr/include/c++/14.2.1/iostream \
+ /home/light/syncPM/packageManager/packageManager.h \
  /usr/include/c++/14.2.1/array /usr/include/c++/14.2.1/fstream \
  /usr/include/c++/14.2.1/bits/codecvt.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \

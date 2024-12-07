@@ -1,16 +1,16 @@
-# 0 "/home/light/cpp/syncpm/packageManager/packageManager.cpp"
-# 1 "/home/light/cpp/syncpm/cmake-build-debug//"
+# 0 "/home/light/syncPM/packageManager/packageManager.cpp"
+# 1 "/home/light/syncPM/cmake-build-debug//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
-# 1 "/home/light/cpp/syncpm/packageManager/packageManager.cpp"
+# 1 "/home/light/syncPM/packageManager/packageManager.cpp"
 
 
 
 
-# 1 "/home/light/cpp/syncpm/packageManager/packageManager.h" 1
-# 10 "/home/light/cpp/syncpm/packageManager/packageManager.h"
+# 1 "/home/light/syncPM/packageManager/packageManager.h" 1
+# 10 "/home/light/syncPM/packageManager/packageManager.h"
 # 1 "/usr/include/c++/14.2.1/array" 1 3
 # 32 "/usr/include/c++/14.2.1/array" 3
        
@@ -14078,7 +14078,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 11 "/home/light/cpp/syncpm/packageManager/packageManager.h" 2
+# 11 "/home/light/syncPM/packageManager/packageManager.h" 2
 # 1 "/usr/include/c++/14.2.1/fstream" 1 3
 # 36 "/usr/include/c++/14.2.1/fstream" 3
        
@@ -46316,11 +46316,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1361 "/usr/include/c++/14.2.1/fstream" 2 3
-# 12 "/home/light/cpp/syncpm/packageManager/packageManager.h" 2
+# 12 "/home/light/syncPM/packageManager/packageManager.h" 2
 
 
 
-# 14 "/home/light/cpp/syncpm/packageManager/packageManager.h"
+# 14 "/home/light/syncPM/packageManager/packageManager.h"
 class packageManager
 {
 public:
@@ -46337,6 +46337,7 @@ public:
 
     packageManager();
     void installPackage(PackageName_t packageName);
+    void updatePackage(PackageName_t packageName);
 
 
 private:
@@ -46361,11 +46362,13 @@ private:
 
     bool wasPackageRegistered(std::string_view packageName);
     void insurePackageRegistered(PackageName_t packageName);
-};
-# 6 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 2
 
-# 1 "/home/light/cpp/syncpm/packageManager/../constants.h" 1
-# 9 "/home/light/cpp/syncpm/packageManager/../constants.h"
+    int runSystemCommand(Command command, PackageName_t packageName);
+};
+# 6 "/home/light/syncPM/packageManager/packageManager.cpp" 2
+
+# 1 "/home/light/syncPM/packageManager/../constants.h" 1
+# 9 "/home/light/syncPM/packageManager/../constants.h"
 namespace constants
 {
     constexpr const char* toolName { "syncPM" };
@@ -46373,8 +46376,8 @@ namespace constants
     constexpr const char* commandFileName { "commands" };
     constexpr const char* packageFileName { "packages" };
 }
-# 8 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 2
-# 1 "/home/light/cpp/syncpm/packageManager/../util/util.h" 1
+# 8 "/home/light/syncPM/packageManager/packageManager.cpp" 2
+# 1 "/home/light/syncPM/packageManager/../util/util.h" 1
 
 
 
@@ -47564,12 +47567,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1239 "/usr/include/c++/14.2.1/sstream" 2 3
-# 9 "/home/light/cpp/syncpm/packageManager/../util/util.h" 2
+# 9 "/home/light/syncPM/packageManager/../util/util.h" 2
 
 
 
 
-# 12 "/home/light/cpp/syncpm/packageManager/../util/util.h"
+# 12 "/home/light/syncPM/packageManager/../util/util.h"
 std::ostringstream getConfigFolderPath();
 
 std::string getPmCfgFilePath(std::string_view pmName);
@@ -47583,7 +47586,7 @@ std::string_view getLongestDirectoryPath(std::string_view filePath);
 void insureFile(std::string_view path);
 
 void insureSourceDir();
-# 9 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 2
+# 9 "/home/light/syncPM/packageManager/packageManager.cpp" 2
 
 # 1 "/usr/include/c++/14.2.1/iostream" 1 3
 # 36 "/usr/include/c++/14.2.1/iostream" 3
@@ -47618,7 +47621,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 11 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 2
+# 11 "/home/light/syncPM/packageManager/packageManager.cpp" 2
 # 1 "/usr/include/c++/14.2.1/cassert" 1 3
 # 41 "/usr/include/c++/14.2.1/cassert" 3
        
@@ -47648,12 +47651,12 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 }
 # 45 "/usr/include/c++/14.2.1/cassert" 2 3
-# 12 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 2
+# 12 "/home/light/syncPM/packageManager/packageManager.cpp" 2
 
-# 1 "/home/light/cpp/syncpm/packageManager/../color.h" 1
-# 11 "/home/light/cpp/syncpm/packageManager/../color.h"
+# 1 "/home/light/syncPM/packageManager/../color.h" 1
+# 11 "/home/light/syncPM/packageManager/../color.h"
 
-# 11 "/home/light/cpp/syncpm/packageManager/../color.h"
+# 11 "/home/light/syncPM/packageManager/../color.h"
 namespace color
 {
     inline std::string red(std::string_view text)
@@ -47664,7 +47667,7 @@ namespace color
         return coloredText.str();
     }
 }
-# 14 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 2
+# 14 "/home/light/syncPM/packageManager/packageManager.cpp" 2
 
 std::fstream packageManager::fileSetup(const char* fileName)
 {
@@ -47693,17 +47696,17 @@ std::string_view packageManager::getCommandName(Command command)
             return "update";
         default:
             
-# 41 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 3 4
+# 41 "/home/light/syncPM/packageManager/packageManager.cpp" 3 4
            (static_cast <bool> (
-# 41 "/home/light/cpp/syncpm/packageManager/packageManager.cpp"
+# 41 "/home/light/syncPM/packageManager/packageManager.cpp"
            command == max_commands && "getCommandName(Command): forgot to add another command parameter"
-# 41 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 3 4
+# 41 "/home/light/syncPM/packageManager/packageManager.cpp" 3 4
            ) ? void (0) : __assert_fail (
-# 41 "/home/light/cpp/syncpm/packageManager/packageManager.cpp"
+# 41 "/home/light/syncPM/packageManager/packageManager.cpp"
            "command == max_commands && \"getCommandName(Command): forgot to add another command parameter\""
-# 41 "/home/light/cpp/syncpm/packageManager/packageManager.cpp" 3 4
+# 41 "/home/light/syncPM/packageManager/packageManager.cpp" 3 4
            , __builtin_FILE (), __builtin_LINE (), __extension__ __PRETTY_FUNCTION__))
-# 41 "/home/light/cpp/syncpm/packageManager/packageManager.cpp"
+# 41 "/home/light/syncPM/packageManager/packageManager.cpp"
                                                                                                                 ;
             return "undefined";
     }
@@ -47801,15 +47804,31 @@ void packageManager::insurePackageRegistered(std::string_view packageName)
     }
 }
 
-void packageManager::installPackage(PackageName_t packageName)
+int packageManager::runSystemCommand(Command command, PackageName_t packageName)
 {
-    std::string instCommand { getCommandFromStorage(install) };
+    std::string instCommand { getCommandFromStorage(command) };
 
     std::ostringstream fullCommand {};
 
     fullCommand << instCommand << ' ' << packageName;
 
-    int success { system(fullCommand.str().c_str()) };
+    return system(fullCommand.str().c_str());
+}
+
+void packageManager::installPackage(PackageName_t packageName)
+{
+
+    int success { runSystemCommand(install, packageName ) };
+
+    if (success == 0)
+    {
+        insurePackageRegistered(packageName);
+    }
+}
+
+void packageManager::updatePackage(PackageName_t packageName)
+{
+    int success { runSystemCommand(update, packageName ) };
 
     if (success == 0)
     {

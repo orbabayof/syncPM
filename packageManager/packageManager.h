@@ -19,6 +19,7 @@ public:
     {
         install,
         update,
+        uninstall,
 
         max_commands
     };
@@ -27,6 +28,8 @@ public:
 
     packageManager();
     void installPackage(PackageName_t packageName);
+    void updatePackage(PackageName_t packageName);
+    void uninstallPackage(PackageName_t packageName);
 
 
 private:
@@ -37,7 +40,7 @@ private:
     std::fstream m_packages {};
     std::fstream m_commands {};
 
-    constexpr static std::array<Command,max_commands> allCmd {install, update};
+    constexpr static std::array<Command,max_commands> allCmd {install, update, uninstall};
 
     static std::fstream fileSetup(const char* fileName);
 
@@ -51,6 +54,10 @@ private:
 
     bool wasPackageRegistered(std::string_view packageName);
     void insurePackageRegistered(PackageName_t packageName);
+
+    int runSystemCommand(Command command, PackageName_t packageName);
+
+    static void removePackageFromStorage(PackageName_t packageName);
 };
 
 #endif //PACKAGEMANAGER_H

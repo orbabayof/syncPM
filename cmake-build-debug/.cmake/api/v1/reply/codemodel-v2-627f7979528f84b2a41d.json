@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/light/cpp/syncpm/cmake-build-debug",
-		"source" : "/home/light/cpp/syncpm"
+		"build" : "/home/light/syncPM/cmake-build-debug",
+		"source" : "/home/light/syncPM"
 	},
 	"version" : 
 	{

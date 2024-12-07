@@ -1,15 +1,15 @@
-# 0 "/home/light/cpp/syncpm/util/util.cpp"
-# 1 "/home/light/cpp/syncpm/cmake-build-debug//"
+# 0 "/home/light/syncPM/util/util.cpp"
+# 1 "/home/light/syncPM/cmake-build-debug//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
-# 1 "/home/light/cpp/syncpm/util/util.cpp"
+# 1 "/home/light/syncPM/util/util.cpp"
 
 
 
 
-# 1 "/home/light/cpp/syncpm/util/../constants.h" 1
+# 1 "/home/light/syncPM/util/../constants.h" 1
 
 
 
@@ -18983,10 +18983,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 905 "/usr/include/c++/14.2.1/string_view" 2 3
-# 8 "/home/light/cpp/syncpm/util/../constants.h" 2
+# 8 "/home/light/syncPM/util/../constants.h" 2
 
 
-# 9 "/home/light/cpp/syncpm/util/../constants.h"
+# 9 "/home/light/syncPM/util/../constants.h"
 namespace constants
 {
     constexpr const char* toolName { "syncPM" };
@@ -18994,8 +18994,8 @@ namespace constants
     constexpr const char* commandFileName { "commands" };
     constexpr const char* packageFileName { "packages" };
 }
-# 6 "/home/light/cpp/syncpm/util/util.cpp" 2
-# 1 "/home/light/cpp/syncpm/util/../color.h" 1
+# 6 "/home/light/syncPM/util/util.cpp" 2
+# 1 "/home/light/syncPM/util/../color.h" 1
 
 
 
@@ -44479,11 +44479,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1239 "/usr/include/c++/14.2.1/sstream" 2 3
-# 9 "/home/light/cpp/syncpm/util/../color.h" 2
+# 9 "/home/light/syncPM/util/../color.h" 2
 
 
 
-# 11 "/home/light/cpp/syncpm/util/../color.h"
+# 11 "/home/light/syncPM/util/../color.h"
 namespace color
 {
     inline std::string red(std::string_view text)
@@ -44494,7 +44494,7 @@ namespace color
         return coloredText.str();
     }
 }
-# 7 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 7 "/home/light/syncPM/util/util.cpp" 2
 
 # 1 "/usr/include/c++/14.2.1/cassert" 1 3
 # 41 "/usr/include/c++/14.2.1/cassert" 3
@@ -44527,7 +44527,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 }
 # 45 "/usr/include/c++/14.2.1/cassert" 2 3
-# 9 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 9 "/home/light/syncPM/util/util.cpp" 2
 # 1 "/usr/include/c++/14.2.1/iostream" 1 3
 # 36 "/usr/include/c++/14.2.1/iostream" 3
        
@@ -44559,7 +44559,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 10 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 10 "/home/light/syncPM/util/util.cpp" 2
 # 1 "/usr/include/c++/14.2.1/fstream" 1 3
 # 36 "/usr/include/c++/14.2.1/fstream" 3
        
@@ -47174,12 +47174,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1361 "/usr/include/c++/14.2.1/fstream" 2 3
-# 11 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 11 "/home/light/syncPM/util/util.cpp" 2
 # 1 "/usr/include/c++/14.2.1/cstdlib" 1 3
 # 39 "/usr/include/c++/14.2.1/cstdlib" 3
        
 # 40 "/usr/include/c++/14.2.1/cstdlib" 3
-# 12 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 12 "/home/light/syncPM/util/util.cpp" 2
 # 1 "/usr/include/c++/14.2.1/filesystem" 1 3
 # 33 "/usr/include/c++/14.2.1/filesystem" 3
        
@@ -63017,7 +63017,7 @@ namespace filesystem
 
 }
 # 55 "/usr/include/c++/14.2.1/filesystem" 2 3
-# 13 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 13 "/home/light/syncPM/util/util.cpp" 2
 
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
@@ -64420,26 +64420,26 @@ extern __pid_t gettid (void) noexcept (true);
 # 1222 "/usr/include/unistd.h" 2 3 4
 
 }
-# 15 "/home/light/cpp/syncpm/util/util.cpp" 2
+# 15 "/home/light/syncPM/util/util.cpp" 2
 
 
-# 16 "/home/light/cpp/syncpm/util/util.cpp"
+# 16 "/home/light/syncPM/util/util.cpp"
 std::ostringstream getConfigFolderPath()
 {
     std::ostringstream sourceDirectory {};
 
     
-# 20 "/home/light/cpp/syncpm/util/util.cpp" 3 4
+# 20 "/home/light/syncPM/util/util.cpp" 3 4
    (static_cast <bool> (
-# 20 "/home/light/cpp/syncpm/util/util.cpp"
+# 20 "/home/light/syncPM/util/util.cpp"
    getenv("USER") && "user environment is null"
-# 20 "/home/light/cpp/syncpm/util/util.cpp" 3 4
+# 20 "/home/light/syncPM/util/util.cpp" 3 4
    ) ? void (0) : __assert_fail (
-# 20 "/home/light/cpp/syncpm/util/util.cpp"
+# 20 "/home/light/syncPM/util/util.cpp"
    "getenv(\"USER\") && \"user environment is null\""
-# 20 "/home/light/cpp/syncpm/util/util.cpp" 3 4
+# 20 "/home/light/syncPM/util/util.cpp" 3 4
    , __builtin_FILE (), __builtin_LINE (), __extension__ __PRETTY_FUNCTION__))
-# 20 "/home/light/cpp/syncpm/util/util.cpp"
+# 20 "/home/light/syncPM/util/util.cpp"
                                                        ;
 
     sourceDirectory << "/home/" << getenv("USER")

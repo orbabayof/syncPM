@@ -37,6 +37,8 @@ std::string_view packageManager::getCommandName(Command command)
             return "install";
         case update:
             return "update";
+        case uninstall:
+            return "uninstall";
         default:
             assert(command == max_commands && "getCommandName(Command): forgot to add another command parameter");
             return "undefined";
@@ -135,21 +137,58 @@ void packageManager::insurePackageRegistered(std::string_view packageName)
     }
 }
 
-void packageManager::installPackage(PackageName_t packageName)
+int packageManager::runSystemCommand(Command command, PackageName_t packageName)
 {
-    std::string instCommand { getCommandFromStorage(install) };
+    std::string instCommand { getCommandFromStorage(command) };
 
     std::ostringstream fullCommand {};
 
     fullCommand << instCommand << ' ' << packageName;
 
-    int success { system(fullCommand.str().c_str()) };
+    return system(fullCommand.str().c_str());
+}
+
+void packageManager::installPackage(PackageName_t packageName)
+{
+
+    int success { runSystemCommand(install, packageName ) };
 
     if (success == 0)
     {
         insurePackageRegistered(packageName);
     }
 }
+
+void packageManager::updatePackage(PackageName_t packageName)
+{
+    int success { runSystemCommand(update, packageName ) };
+
+    if (success == 0)
+    {
+        insurePackageRegistered(packageName);
+    }
+}
+
+void packageManager::uninstallPackage(PackageName_t packageName)
+{
+    int success { runSystemCommand(uninstall, packageName ) };
+
+    if (success == 0)
+    {
+        removePackageFromStorage(packageName);
+    }
+}
+
+void packageManager::removePackageFromStorage(PackageName_t packageName)
+{
+   // std::ostringstream command {};
+    //sed -i '/packageName/d' PATH
+    //command << "sed -i /" << packageName << "/d " << getConfigFolderPath().str() << getDistroId() << '/' <<
+    //         constants::packageFileName;
+    //system(command.str().c_str());
+}
+
+
 
 
 

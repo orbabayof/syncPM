@@ -6,32 +6,32 @@
 	"config" : "Debug",
 	"cxx-modules" : {},
 	"database-info" : null,
-	"dir-cur-bld" : "/home/light/cpp/syncpm/cmake-build-debug",
-	"dir-cur-src" : "/home/light/cpp/syncpm",
-	"dir-top-bld" : "/home/light/cpp/syncpm/cmake-build-debug",
-	"dir-top-src" : "/home/light/cpp/syncpm",
+	"dir-cur-bld" : "/home/light/syncPM/cmake-build-debug",
+	"dir-cur-src" : "/home/light/syncPM",
+	"dir-top-bld" : "/home/light/syncPM/cmake-build-debug",
+	"dir-top-src" : "/home/light/syncPM",
 	"exports" : [],
 	"forward-modules-from-target-dirs" : [],
 	"include-dirs" : [],
 	"language" : "CXX",
 	"linked-target-dirs" : [],
-	"module-dir" : "/home/light/cpp/syncpm/cmake-build-debug/CMakeFiles/syncpm.dir",
+	"module-dir" : "/home/light/syncPM/cmake-build-debug/CMakeFiles/syncpm.dir",
 	"sources" : 
 	{
 		"CMakeFiles/syncpm.dir/main.cpp.o" : 
 		{
 			"language" : "CXX",
-			"source" : "/home/light/cpp/syncpm/main.cpp"
+			"source" : "/home/light/syncPM/main.cpp"
 		},
 		"CMakeFiles/syncpm.dir/packageManager/packageManager.cpp.o" : 
 		{
 			"language" : "CXX",
-			"source" : "/home/light/cpp/syncpm/packageManager/packageManager.cpp"
+			"source" : "/home/light/syncPM/packageManager/packageManager.cpp"
 		},
 		"CMakeFiles/syncpm.dir/util/util.cpp.o" : 
 		{
 			"language" : "CXX",
-			"source" : "/home/light/cpp/syncpm/util/util.cpp"
+			"source" : "/home/light/syncPM/util/util.cpp"
 		}
 	}
 }

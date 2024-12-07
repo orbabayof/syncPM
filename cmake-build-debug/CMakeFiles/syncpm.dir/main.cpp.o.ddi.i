@@ -1,11 +1,11 @@
-# 0 "/home/light/cpp/syncpm/main.cpp"
-# 1 "/home/light/cpp/syncpm/cmake-build-debug//"
+# 0 "/home/light/syncPM/main.cpp"
+# 1 "/home/light/syncPM/cmake-build-debug//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
-# 1 "/home/light/cpp/syncpm/main.cpp"
-# 1 "/home/light/cpp/syncpm/constants.h" 1
+# 1 "/home/light/syncPM/main.cpp"
+# 1 "/home/light/syncPM/constants.h" 1
 
 
 
@@ -18979,10 +18979,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 905 "/usr/include/c++/14.2.1/string_view" 2 3
-# 8 "/home/light/cpp/syncpm/constants.h" 2
+# 8 "/home/light/syncPM/constants.h" 2
 
 
-# 9 "/home/light/cpp/syncpm/constants.h"
+# 9 "/home/light/syncPM/constants.h"
 namespace constants
 {
     constexpr const char* toolName { "syncPM" };
@@ -18990,8 +18990,8 @@ namespace constants
     constexpr const char* commandFileName { "commands" };
     constexpr const char* packageFileName { "packages" };
 }
-# 2 "/home/light/cpp/syncpm/main.cpp" 2
-# 1 "/home/light/cpp/syncpm/color.h" 1
+# 2 "/home/light/syncPM/main.cpp" 2
+# 1 "/home/light/syncPM/color.h" 1
 
 
 
@@ -44475,11 +44475,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1239 "/usr/include/c++/14.2.1/sstream" 2 3
-# 9 "/home/light/cpp/syncpm/color.h" 2
+# 9 "/home/light/syncPM/color.h" 2
 
 
 
-# 11 "/home/light/cpp/syncpm/color.h"
+# 11 "/home/light/syncPM/color.h"
 namespace color
 {
     inline std::string red(std::string_view text)
@@ -44490,10 +44490,10 @@ namespace color
         return coloredText.str();
     }
 }
-# 3 "/home/light/cpp/syncpm/main.cpp" 2
+# 3 "/home/light/syncPM/main.cpp" 2
 
-# 1 "/home/light/cpp/syncpm/util/util.h" 1
-# 12 "/home/light/cpp/syncpm/util/util.h"
+# 1 "/home/light/syncPM/util/util.h" 1
+# 12 "/home/light/syncPM/util/util.h"
 std::ostringstream getConfigFolderPath();
 
 std::string getPmCfgFilePath(std::string_view pmName);
@@ -44507,7 +44507,7 @@ std::string_view getLongestDirectoryPath(std::string_view filePath);
 void insureFile(std::string_view path);
 
 void insureSourceDir();
-# 5 "/home/light/cpp/syncpm/main.cpp" 2
+# 5 "/home/light/syncPM/main.cpp" 2
 
 # 1 "/usr/include/c++/14.2.1/iostream" 1 3
 # 36 "/usr/include/c++/14.2.1/iostream" 3
@@ -44542,10 +44542,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 7 "/home/light/cpp/syncpm/main.cpp" 2
+# 7 "/home/light/syncPM/main.cpp" 2
 
-# 1 "/home/light/cpp/syncpm/packageManager/packageManager.h" 1
-# 10 "/home/light/cpp/syncpm/packageManager/packageManager.h"
+# 1 "/home/light/syncPM/packageManager/packageManager.h" 1
+# 10 "/home/light/syncPM/packageManager/packageManager.h"
 # 1 "/usr/include/c++/14.2.1/array" 1 3
 # 32 "/usr/include/c++/14.2.1/array" 3
        
@@ -44965,7 +44965,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 11 "/home/light/cpp/syncpm/packageManager/packageManager.h" 2
+# 11 "/home/light/syncPM/packageManager/packageManager.h" 2
 # 1 "/usr/include/c++/14.2.1/fstream" 1 3
 # 36 "/usr/include/c++/14.2.1/fstream" 3
        
@@ -47580,11 +47580,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1361 "/usr/include/c++/14.2.1/fstream" 2 3
-# 12 "/home/light/cpp/syncpm/packageManager/packageManager.h" 2
+# 12 "/home/light/syncPM/packageManager/packageManager.h" 2
 
 
 
-# 14 "/home/light/cpp/syncpm/packageManager/packageManager.h"
+# 14 "/home/light/syncPM/packageManager/packageManager.h"
 class packageManager
 {
 public:
@@ -47601,6 +47601,7 @@ public:
 
     packageManager();
     void installPackage(PackageName_t packageName);
+    void updatePackage(PackageName_t packageName);
 
 
 private:
@@ -47625,15 +47626,17 @@ private:
 
     bool wasPackageRegistered(std::string_view packageName);
     void insurePackageRegistered(PackageName_t packageName);
+
+    int runSystemCommand(Command command, PackageName_t packageName);
 };
-# 9 "/home/light/cpp/syncpm/main.cpp" 2
+# 9 "/home/light/syncPM/main.cpp" 2
 
 
 int main(int argc, char *argv[])
 {
     packageManager pm {};
 
-    pm.insurePackageRegistered("xorg");
+    pm.updatePackage("rust");
 
 
 

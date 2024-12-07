@@ -1,7 +1,7 @@
 CMakeFiles/syncpm.dir/packageManager/packageManager.cpp.o.ddi: \
- /home/light/cpp/syncpm/packageManager/packageManager.cpp \
+ /home/light/syncPM/packageManager/packageManager.cpp \
  /usr/include/stdc-predef.h \
- /home/light/cpp/syncpm/packageManager/packageManager.h \
+ /home/light/syncPM/packageManager/packageManager.h \
  /usr/include/c++/14.2.1/array /usr/include/c++/14.2.1/compare \
  /usr/include/c++/14.2.1/bits/version.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -150,8 +150,8 @@ CMakeFiles/syncpm.dir/packageManager/packageManager.cpp.o.ddi: \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/14.2.1/bits/fstream.tcc \
- /home/light/cpp/syncpm/packageManager/../constants.h \
- /home/light/cpp/syncpm/packageManager/../util/util.h \
+ /home/light/syncPM/packageManager/../constants.h \
+ /home/light/syncPM/packageManager/../util/util.h \
  /usr/include/c++/14.2.1/sstream /usr/include/c++/14.2.1/bits/sstream.tcc \
  /usr/include/c++/14.2.1/iostream /usr/include/c++/14.2.1/cassert \
- /usr/include/assert.h /home/light/cpp/syncpm/packageManager/../color.h
+ /usr/include/assert.h /home/light/syncPM/packageManager/../color.h
